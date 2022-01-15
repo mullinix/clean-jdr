@@ -20,7 +20,6 @@ class Cleaner:
         Args:
             path: path to file/directory
             ext: file extension to look for.
-                 - will also look for ext.txt
             group: whether to group on 3+ approved chars
                  - will also print each group on a separate line
             dry_run: will print output to stdout instead of a file
