@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://mullinix.github.io/clean-jdr/</loc>
+         <lastmod>2022-01-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mullinix.github.io/clean-jdr/src/developer/</loc>
+         <lastmod>2022-01-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mullinix.github.io/clean-jdr/src/reference/</loc>
+         <lastmod>2022-01-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mullinix.github.io/clean-jdr/src/user/</loc>
+         <lastmod>2022-01-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
