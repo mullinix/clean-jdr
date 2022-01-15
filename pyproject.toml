@@ -1,0 +1,83 @@
+# Python configuration file for building, dependencies, and tooling.
+#
+# For more information, visit
+# https://snarky.ca/what-the-heck-is-pyproject-toml/.
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[tool.black]
+line-length = 80
+
+[tool.coverage.report]
+exclude_lines = [
+    "if sys.version_info.*",
+    "pragma: no cover",
+    "raise NotImplementedError",
+]
+fail_under = 100
+show_missing = true
+
+[tool.coverage.run]
+branch = true
+command_line = "-m pytest"
+omit = []
+source = ["clean_jdr"]
+
+[tool.poetry]
+authors = ["James Mullinix <james.mullinix@gmail.com>"]
+description = "Clean output files (.jdr) from wire sniffing."
+documentation = "https://mullinix.github.io/clean-jdr"
+homepage = "https://github.com/mullinix/clean-jdr"
+keywords = []
+license = "MIT"
+name = "clean-jdr"
+readme = "README.md"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+python = "^3.7.0"
+typer = "^0.3.0"
+
+[tool.poetry.dev-dependencies]
+bandit = "^1.7.0"
+black = "^21.9b0"
+coverage = { version = "^6.0.0", extras = ["toml"] }
+flake8 = "^4.0.0"
+flake8-bugbear = "^21.9.0"
+flake8-docstrings = "^1.6.0"
+flake8-import-order = "^0.18.1"
+mccabe = "^0.6.1"
+mkdocs = "^1.2.0"
+mkdocs-material = "^7.3.0"
+mkdocstrings = "^0.16.2"
+mypy = "^0.910"
+pdbpp = "^0.10.3"
+py-spy = "^0.3.0"
+pymdown-extensions = "^9.0.0"
+pytest = "^6.2.0"
+pytest-cov = "^3.0.0"
+pytest-mock = "^3.6.0"
+toml = "^0.10.2"
+tox = "^3.24.0"
+typer-cli = "^0.0.12"
+types-chardet = "^4.0.3"
+types-toml = "^0.10.3"
+
+[tool.poetry.scripts]
+clean-jdr = "clean_jdr.__main__:app"
+[tool.pytest.ini_options]
+addopts = "-sv"
+markers = [
+    "functional: mark as functional test.",
+    "integration: mark as integration test.",
+    "unit: mark as unit test.",
+]
+python_classes = "Test*"
+python_files = [
+    "__init__.py",
+    "test_*.py",
+]
+python_functions = ["test_*"]
+testpaths = ["tests"]
